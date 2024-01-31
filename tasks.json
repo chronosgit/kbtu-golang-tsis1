@@ -1,0 +1,62 @@
+[
+    {
+        "id": "1",
+        "title": "Contains Duplicate",
+        "difficulty": "Easy",
+        "link": "https://leetcode.com/problems/contains-duplicate/"
+    },
+    {
+        "id": "2",
+        "title": "Valid Anagram",
+        "difficulty": "Easy",
+        "link": "https://leetcode.com/problems/valid-anagram/"
+    },
+    {
+        "id": "3",
+        "title": "Two Sum",
+        "difficulty": "Easy",
+        "link": "https://leetcode.com/problems/two-sum/"
+    },
+    {
+        "id": "4",
+        "title": "Group Anagrams",
+        "difficulty": "Medium",
+        "link": "https://leetcode.com/problems/group-anagrams/"
+    },
+    {
+        "id": "5",
+        "title": "Top K Frequent Elements",
+        "difficulty": "Medium",
+        "link": "https://leetcode.com/problems/top-k-frequent-elements/"
+    },
+    {
+        "id": "6",
+        "title": "Product of Array Except Self",
+        "difficulty": "Medium",
+        "link": "https://leetcode.com/problems/product-of-array-except-self/"
+    },
+    {
+        "id": "7",
+        "title": "Longest Consecutive Sequence",
+        "difficulty": "Medium",
+        "link": "https://leetcode.com/problems/longest-consecutive-sequence/"
+    },
+    {
+        "id": "8",
+        "title": "Valid Palindrome",
+        "difficulty": "Easy",
+        "link": "https://leetcode.com/problems/valid-palindrome/"
+    },
+    {
+        "id": "9",
+        "title": "Two Sum II Input Array is Sorted",
+        "difficulty": "Medium",
+        "link": "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/"
+    },
+    {
+        "id": "10",
+        "title": "Valid Parentheses",
+        "difficulty": "Easy",
+        "link": "https://leetcode.com/problems/valid-parentheses/"
+    }
+]
