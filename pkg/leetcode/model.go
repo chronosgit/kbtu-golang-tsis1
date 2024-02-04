@@ -1,14 +1,19 @@
-package json_fetch
+package leetcode
 
 import (
 	"encoding/json"
 	"log"
 	"os"
-
-	interfaces "github.com/chronosgit/kbtu-golang-tsis1/api/cmd/interfaces"
 )
 
-func GetTasksFromJson() []interfaces.ITask {
+type ITask struct {
+	Id         string `json:"id"`
+	Title      string `json:"title"`
+	Difficulty string `json:"difficulty"`
+	Link       string `json:"link"`
+}
+
+func GetTasksFromJson() []ITask {
 	jsonFilePath := "./tasks.json"
 
 	data, err := os.ReadFile(jsonFilePath)
@@ -16,7 +21,7 @@ func GetTasksFromJson() []interfaces.ITask {
 		log.Fatal(err)
 	}
 
-	var tasks []interfaces.ITask
+	var tasks []ITask
 
 	err = json.Unmarshal(data, &tasks)
 	if err != nil {

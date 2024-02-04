@@ -1,12 +1,11 @@
-package handlers
+package main
 
 import (
 	"encoding/json"
 	"fmt"
 	"net/http"
 
-	interfaces "github.com/chronosgit/kbtu-golang-tsis1/api/cmd/interfaces"
-	json_fetch "github.com/chronosgit/kbtu-golang-tsis1/api/cmd/json_fetch"
+	leetcode "github.com/chronosgit/kbtu-golang-tsis1/api/pkg/leetcode"
 )
 
 func HealthCheck(w http.ResponseWriter, r *http.Request) {
@@ -15,10 +14,10 @@ func HealthCheck(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Sophisticated Leetcode API is up and running")
 }
 
-func GetTasks(w http.ResponseWriter, r *http.Request) {
-	var response interfaces.ITasksResponse
+func Tasks(w http.ResponseWriter, r *http.Request) {
+	var response ITasksResponse
 
-	tasks := json_fetch.GetTasksFromJson()
+	tasks := leetcode.GetTasksFromJson()
 
 	response.Tasks = tasks
 
@@ -34,12 +33,12 @@ func GetTasks(w http.ResponseWriter, r *http.Request) {
 	w.Write(jsonResponse)
 }
 
-func GetTaskById(w http.ResponseWriter, r *http.Request) {
+func TaskById(w http.ResponseWriter, r *http.Request) {
 	id := r.URL.Query().Get("id")
-	var response interfaces.ITaskResponse
-	tasks := json_fetch.GetTasksFromJson()
+	var response ITaskResponse
+	tasks := leetcode.GetTasksFromJson()
 
-	var foundTask interfaces.ITask
+	var foundTask leetcode.ITask
 	for _, task := range tasks {
 		if task.Id == id {
 			foundTask = task
